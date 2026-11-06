@@ -1,0 +1,9 @@
+CREATE TABLE participants (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  num_id VARCHAR(255) NOT NULL,
+  visitor_id CHAR(32) NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  participants ADD COLUMN components MEDIUMTEXT NOT NULL,
+  PRIMARY KEY (id),
+  INDEX idx_visitor_id (visitor_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
